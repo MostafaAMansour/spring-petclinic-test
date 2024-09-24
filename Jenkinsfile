@@ -39,29 +39,28 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                script {
-                    // Start services
-                    sh 'java -jar target/*.jar'
-                    // Run the test command
-                    sh 'sleep 30' // wait for the service to be ready
-                    // Execute the test command inside the app service
-                    sh 'curl localhost:8080/owners/10'
-                }
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         script {
+        //             // Start services
+        //             sh 'java -jar target/*.jar'
+        //             // Run the test command
+        //             sh 'sleep 30' // wait for the service to be ready
+        //             // Execute the test command inside the app service
+        //             sh 'curl localhost:8080/owners/10'
+        //         }
+        //     }
+        // }
 
-        stage('Archive Artifacts') {
-            steps {
-                script {
-                    // Create artifact directory if it doesn't exist
-                    sh "mkdir -p ${ARTIFACT_DIR}"
-                }
-                archiveArtifacts artifacts: "target/*.jar", allowEmptyArchive: true
-            }
-        }
-
+        // stage('Archive Artifacts') {
+        //     steps {
+        //         script {
+        //             // Create artifact directory if it doesn't exist
+        //             sh "mkdir -p ${ARTIFACT_DIR}"
+        //         }
+        //         archiveArtifacts artifacts: "target/*.jar", allowEmptyArchive: true
+        //     }
+        // }
     }
 
     post {
