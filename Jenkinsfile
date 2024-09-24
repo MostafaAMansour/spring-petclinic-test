@@ -6,7 +6,7 @@ pipeline {
     environment {
         DOCKER_HUB_CREDENTIALS = 'dockerhub-MostafaAMansour'
         DOCKER_HUB_REPO = 'mostafaamansour/spring_petclinic'
-        GITHUB_REPO = 'https://github.com/MostafaAMansour/spring-petclinic.git'
+        GITHUB_REPO = 'https://github.com/MostafaAMansour/spring-petclinic-test.git'
         GITHUB_CREDENTIALS = 'Github-MostafaAMansour'
         BRANCH = 'main'
         RECIPIENT = 'toota353535@gmail.com'
