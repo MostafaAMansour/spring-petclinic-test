@@ -32,9 +32,9 @@ pipeline {
             steps {                
                 script {
                     // change permission
-                    sh 'chmod +x ./spring-petclinic/mvnw'
+                    sh 'chmod +x ./mvnw'
                     // Build the maven
-                    sh './spring-petclinic/mvnw package'
+                    sh './mvnw package'
                 }
             }
         }
